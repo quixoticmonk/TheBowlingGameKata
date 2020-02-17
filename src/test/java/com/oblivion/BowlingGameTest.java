@@ -16,5 +16,15 @@ public class BowlingGameTest {
         assertThat(game.score(),is(equalTo(0)));
     }
 
+    @Test
+    public void scoreZeroForAllZeroes(){
+        BowlingGame game = new BowlingGame();
+        for(int i=0;i<20;i++) {
+            game.roll(0);
+        }
+        assertThat(game.score(),is(equalTo(0)));
+    }
+
+
 
 }
