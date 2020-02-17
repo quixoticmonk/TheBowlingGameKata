@@ -17,12 +17,6 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void scoreShouldBeZeroAtStart() {
-        game.roll(0);
-        assertThat(game.score(), is(equalTo(0)));
-    }
-
-    @Test
     public void scoreZeroForAllZeroes() {
         int pins = 0;
         int numberOfThrows = 20;
