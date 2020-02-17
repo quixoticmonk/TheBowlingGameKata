@@ -13,7 +13,7 @@ public class BowlingGameTest {
     void scoreShouldBeZeroAtStart(){
         BowlingGame game = new BowlingGame();
         game.roll(0);
-        assertThat(game.score,is(equalTo(0)));
+        assertThat(game.score(),is(equalTo(0)));
     }
 
 
