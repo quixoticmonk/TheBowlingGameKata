@@ -69,6 +69,8 @@ public class BowlingGameTest {
         assertThat(game.score(), is(equalTo(28)));
     }
 
+
+
     private void rollSpare() {
         game.roll(5);
         game.roll(5);
