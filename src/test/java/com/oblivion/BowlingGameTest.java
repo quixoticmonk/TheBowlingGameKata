@@ -36,8 +36,7 @@ public class BowlingGameTest {
 
     @Test
     public void testOneSpare() {
-        game.roll(5);
-        game.roll(5);
+        rollSpare();
         game.roll(5);
         rollMany(0, 17);
         assertThat(game.score(), is(equalTo(20)));
@@ -45,25 +44,25 @@ public class BowlingGameTest {
 
     @Test
     public void testTwoSpares() {
-        game.roll(5);
-        game.roll(5);
-        game.roll(5);
-        game.roll(5);
+        rollSpare();
+        rollSpare();
         rollMany(0, 16);
         assertThat(game.score(), is(equalTo(25)));
     }
 
     @Test
     public void testFourSpares() {
-        game.roll(5);
-        game.roll(5);
-        game.roll(5);
-        game.roll(5);
+        rollSpare();
+        rollSpare();
         rollMany(0, 2);
-        game.roll(7);
-        game.roll(3);
+        rollSpare();
         rollMany(0, 12);
         assertThat(game.score(), is(equalTo(35)));
+    }
+
+    private void rollSpare() {
+        game.roll(5);
+        game.roll(5);
     }
 
     private void rollMany(int pins, int numberOfThrows) {
