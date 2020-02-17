@@ -24,17 +24,21 @@ public class BowlingGameTest {
 
     @Test
     public void scoreZeroForAllZeroes() {
-        for (int i = 0; i < 20; i++) {
-            game.roll(0);
-        }
+        int pins = 0;
+        int numberOfThrows = 20;
+        rollMany(pins, numberOfThrows);
         assertThat(game.score(), is(equalTo(0)));
+    }
+
+    private void rollMany(int pins, int numberOfThrows) {
+        for (int i = 0; i < numberOfThrows; i++) {
+            game.roll(pins);
+        }
     }
 
     @Test
     public void scoreForAllOnes() {
-        for (int i = 0; i < 20; i++) {
-            game.roll(1);
-        }
+        rollMany(1, 20);
         assertThat(game.score(), is(equalTo(20)));
     }
 
