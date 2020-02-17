@@ -33,7 +33,6 @@ public class BowlingGameTest {
         rollMany(1, 20);
         assertThat(game.score(), is(equalTo(20)));
     }
-/*
 
     @Test
     public void testOneSpare() {
@@ -43,7 +42,6 @@ public class BowlingGameTest {
         rollMany(0, 17);
         assertThat(game.score(), is(equalTo(20)));
     }
-*/
 
 
 
