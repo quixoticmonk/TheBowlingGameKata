@@ -10,7 +10,7 @@ public class BowlingGameTest {
 
 
     @Test
-    void scoreShouldBeZeroAtStart(){
+    public void scoreShouldBeZeroAtStart(){
         BowlingGame game = new BowlingGame();
         game.roll(0);
         assertThat(game.score(),is(equalTo(0)));
