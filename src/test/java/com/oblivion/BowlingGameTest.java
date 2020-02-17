@@ -34,6 +34,16 @@ public class BowlingGameTest {
         assertThat(game.score(), is(equalTo(20)));
     }
 
+    @Test
+    public void testOneSpare() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        rollMany(0, 17);
+        assertThat(game.score(), is(equalTo(20)));
+    }
+
+
 
     private void rollMany(int pins, int numberOfThrows) {
         for (int i = 0; i < numberOfThrows; i++) {
